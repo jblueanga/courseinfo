@@ -1,5 +1,5 @@
 import Header from "./Header"
-import Content from "./Content"
+import Part from "./Part"
 
 
 const App = () => {
@@ -11,10 +11,20 @@ const App = () => {
   const part3 = 'State of a component'
   const exercises3 = 14
 
+  const content = [
+    {part: part1, exercise: exercises1},
+    {part: part2, exercise: exercises2},
+    {part: part3, exercise: exercises3}
+    
+  ]
+
   return (
     <>
      <Header course={course} />
-     <Content part1={part1} part2={part2} part3={part3} />
+     <Part content={content[0].part} exercise={content[0].exercise}/>
+     <Part content={content[1].part} exercise={content[1].exercise}/>
+     <Part content={content[2].part} exercise={content[2].exercise}/>
+     
     
     </>
   )
